@@ -10,3 +10,9 @@
 <br>
 
 <button (click)="sayHello()">Click Me</button>
+
+<ul>
+  @for (fruit of fruits; track fruit) {
+    <li>{{ fruit }}</li>
+  }
+</ul>

@@ -19,4 +19,6 @@ export class App {
   sayHello() {
     alert(`Hello ${this.name}`);
   }
+
+  fruits = ['apple', 'banana', 'orange'];
 }
