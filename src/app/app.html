@@ -46,3 +46,10 @@
 
 <app-user-card [name]="'Valdir'" (selected)="handleSelectedUser($event)"></app-user-card>
 <app-user-card [name]="'Maria'" (selected)="handleSelectedUser($event)"></app-user-card>
+
+<h2>Users from Service</h2>
+<ul>
+  @for (user of userService.users; track user) {
+    <li>{{ user }}</li>
+  }
+</ul>

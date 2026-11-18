@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserCard } from './user-card/user-card';
+import { UserService } from './services/user';
 
 @Component({
   imports: [RouterOutlet, UserCard],
@@ -9,6 +10,7 @@ import { UserCard } from './user-card/user-card';
   templateUrl: './app.html',
 })
 export class App {
+  userService = inject(UserService);
 
   isLogged = false;
 
