@@ -1,3 +1,13 @@
+<button (click)="toggleLogin()">
+  Toggle Login
+</button>
+
+@if (isLogged) {
+  <h2>User logged in</h2>
+} @else {
+  <h2>User not logged in</h2>
+}
+
 <h1>Hello {{ name }}</h1>
 
 <input

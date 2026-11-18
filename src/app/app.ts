@@ -8,6 +8,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
+
+  isLogged = false;
+
+  toggleLogin() {
+    this.isLogged = !this.isLogged;
+  }
+
   name = 'Angular';
   value = 'World';
 
