@@ -8,10 +8,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  name = 'Angular Name';
+  name = 'Angular';
   value = 'World';
 
-  sayHello(value: string) {
-    alert(`Hello ${value}`);
+  updateName(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.name = target.value;
+  }
+
+  sayHello() {
+    alert(`Hello ${this.name}`);
   }
 }

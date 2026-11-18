@@ -1,3 +1,12 @@
 <h1>Hello {{ name }}</h1>
 
-<button (click)="sayHello(value)">Click Me</button>
+<input
+  type="text"
+  [value]="name"
+  (input)="updateName($event)"
+/>
+
+<br>
+<br>
+
+<button (click)="sayHello()">Click Me</button>
