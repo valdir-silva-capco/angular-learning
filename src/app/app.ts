@@ -8,5 +8,10 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  name = 'Angular World';
+  name = 'Angular Name';
+  value = 'World';
+
+  sayHello(value: string) {
+    alert(`Hello ${value}`);
+  }
 }
