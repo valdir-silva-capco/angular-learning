@@ -42,5 +42,7 @@
   Add
 </button>
 
-<app-user-card [name]="'Valdir'"></app-user-card>
-<app-user-card [name]="'Maria'"></app-user-card>
+<p>Selected User: {{ selectedUser }}</p>
+
+<app-user-card [name]="'Valdir'" (selected)="handleSelectedUser($event)"></app-user-card>
+<app-user-card [name]="'Maria'" (selected)="handleSelectedUser($event)"></app-user-card>

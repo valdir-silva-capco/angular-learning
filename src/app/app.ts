@@ -42,4 +42,9 @@ export class App {
       this.newFruit='';
     }
   }
+
+  selectedUser = '';
+  handleSelectedUser(name: string) {
+    this.selectedUser = name;
+  }
 }
