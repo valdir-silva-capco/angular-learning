@@ -20,5 +20,18 @@ export class App {
     alert(`Hello ${this.name}`);
   }
 
+  newFruit = '';
   fruits = ['apple', 'banana', 'orange'];
+
+  updateFruit(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.newFruit = target.value;
+  }
+
+  addFruit() {
+    if (this.newFruit.trim()) {
+      this.fruits.push(this.newFruit.trim());
+      this.newFruit='';
+    }
+  }
 }

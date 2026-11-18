@@ -11,8 +11,23 @@
 
 <button (click)="sayHello()">Click Me</button>
 
+<br>
+<br>
+
+<h1>My Fruits</h1>
+
+<input
+  type="text"
+  [value]="newFruit"
+  (input)="updateFruit($event)"
+/>
+
 <ul>
   @for (fruit of fruits; track fruit) {
     <li>{{ fruit }}</li>
   }
 </ul>
+
+<button (click)="addFruit()">
+  Add
+</button>
