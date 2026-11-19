@@ -5,4 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
     users = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+
+    addUser(name: string) {
+        this.users.push(name);
+    }
 }

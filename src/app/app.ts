@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { UserCard } from './user-card/user-card';
 import { UserService } from './services/user';
 
 @Component({
-  imports: [RouterOutlet, UserCard],
+  imports: [UserCard],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -48,5 +47,18 @@ export class App {
   selectedUser = '';
   handleSelectedUser(name: string) {
     this.selectedUser = name;
+  }
+
+  newUser = '';
+  updateUser(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.newUser = target.value;
+  }
+
+  addUser() {
+    if(this.newUser.trim()) {
+      this.userService.addUser(this.newUser.trim());
+      this.newUser = '';
+    }
   }
 }
