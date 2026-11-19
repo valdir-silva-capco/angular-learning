@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UserCard } from './user-card/user-card';
 import { UserService } from './services/user';
 
@@ -8,8 +8,12 @@ import { UserService } from './services/user';
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
-export class App {
+export class App implements OnInit{
   userService = inject(UserService);
+
+  ngOnInit() {
+    console.log('AppComponent Mounted!')
+  }
 
   isLogged = false;
 
